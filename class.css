@@ -1,0 +1,15 @@
+p {
+    color: purple;
+}
+
+#blue {
+    background-color: blue;
+}
+
+.red {
+    border: 1px solid red;
+    height: 100ps;
+    width: 100px;
+}
+
+

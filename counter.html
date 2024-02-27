@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Counter </title>
+    <style> 
+    
+    * {
+        margin:0;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: antiquewhite;
+        height: 50vh;
+        text-align: center;
+    }
+    .inner{
+        margin-top: 60px;
+    }
+    .inner > .counter {
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    #increment {
+        width: 12em;
+        border-radius: 20px;
+        height: 3em;
+        font-size: 1.2em;
+        background-color: rgb(190, 119, 131);
+
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="container"> 
+
+        <div class="inner"> 
+
+            <div> 
+                <button id="increment"> 
+                    increment
+                </button>
+            </div>
+
+            <div class = "counter"> 
+                0
+            </div>
+        </div>
+    </div>
+    <script> 
+
+        //initialize the counter 
+        let counter = 0;
+        let counter_div = document.querySelector(".counter");
+        const btn = document.getElementById("increment"); 
+        
+        //Add event listeners 
+        btn.addEventListener("click", increment);
+        btn.addEventListener('mouseout', clear);
+
+        //increment function
+        function increment() {
+            counter_div.textContent = `Counter ${counter++}`;
+        }
+    
+        //Add event listeners for the mouseout function
+ 
+        function clear(){
+            setTimeout( () => 
+            {
+                counter = 0;
+                counter_div.textContent = 0; // Reset content of the .counter div
+            }, 4000); 
+        }
+        
+        
+    </script>
+</body>
+</html>

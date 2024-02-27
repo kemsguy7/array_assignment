@@ -2,7 +2,7 @@
 //creates a function that multiploes each element in a array by 2 and return the frst element and the transformed array, 
 //in another array without mutating the original arrray
 
-/*
+
 function multiply_arr(arr) {
     let first_element = arr[0];
     let newArr = [];
@@ -20,8 +20,8 @@ function multiply_arr(arr) {
 
 console.log(multiply_arr([1,2,3,4,5]));
 
-*/
 
+// SOLUTION 2
 
 
 function multiply_arr(arr) {
